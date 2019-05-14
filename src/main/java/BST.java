@@ -57,7 +57,7 @@ public class BST {
             }
         } else { // we did not find the node just yet
             if (node.getLeft() == null && node.getRight() == null) {
-                throw new Exception("Number to be removed does not exist!");
+                throw new Exception("Item to be removed does not exist!");
             } else if (data.compareTo(node.getData()) < 0) {     // recursion
                 node.setLeft(remove(node.getLeft(), data));
             } else {
