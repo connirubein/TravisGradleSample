@@ -11,6 +11,29 @@ public class BSTTest {
     BST tree = new BST();
 
     @Test
+    public void testRemoveNonExistent() throws Exception {
+        tree.add("mary");
+        tree.add("sab");
+        tree.add("krishia");
+        try {
+            tree.remove("ruffa");
+        }catch (Exception e){
+            assertEquals(e.getMessage(), "Item to be removed does not exist!");
+        }
+    }
+
+    @Test
+    public void testAdd() throws Exception{
+        tree.add("ruffa");
+        tree.add("wina");
+        try {
+            tree.add("ruffa");
+        }catch (Exception e){
+            assertEquals(e.getMessage(), "Item is already in the tree");
+        }
+    }
+
+    @Test
     public void testRemoveOneChild() throws Exception {
         tree.add("mary");
         tree.add("sab");
