@@ -38,7 +38,7 @@ public class BSTTest {
         tree.add("mary");
         tree.add("sab");
         tree.add("krishia");
-        tree.remove("mary");
+        tree.remove("krishia");
         assertFalse(tree.contains("mary"));
         assertTrue(tree.contains("sab"));
         assertTrue(tree.contains("krishia"));
